@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/calc.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>
+            Этот калькулятор использует обратную польскую запись <br><br> (Reverse Polish notation / RPN) — форма записи математических и логических выражений, в которой операнды расположены перед знаками операций. Также запись именуется как польская
+            инверсная запись, обратная бесскобочная запись, бесскобочная символика Лукасевича и постфиксная нотация.
+            <br><br> Принцип работы. Регистры для чисел организованы в виде стека. Последний всегда отображается на дисплее. Добавление числа в стек производится клавишей [&#8593]. Математические операции производятся над двумя последними эелементами
+            стека. Результат помещается в последний регистр и отображается на дисплее. <br> <br> Пример, для выполнения операций (2+3)*5 необходимо нажать клавиши в следующем порядке [2],[&#8593], [3], [+], [5], [*] или [5],[&#8593], [2],[&#8593], [3],[&#8593],
+            [+], [*].<br><br> Кнопка [AC] сбрасыает значение последнего, выводимого на дисплей регистра, в ноль<br><br> Кнопка [C] сбрасывает отображаемый на дисплее регистр в ноль и удаляет все остальные регистры.
+        </p>
+        <div class="calculator">
+            <div class="calculator_display">0</div>
+
+            <div class="calculator_keys">
+                <button class="key-operator" data-action="add">+</button>
+                <button class="key-operator" data-action="subtract">-</button>
+                <button class="key-operator" data-action="multiply">&times;</button>
+                <button class="key-operator" data-action="divide">÷</button>
+
+                <button class="key-num" data-action="7">7</button>
+                <button class="key-num" data-action="8">8</button>
+                <button class="key-num" data-action="9">9</button>
+                <button class="key-operator" data-action="percent">%</button>
+                <button class="key-num" data-action="4">4</button>
+                <button class="key-num" data-action="5">5</button>
+                <button class="key-num" data-action="6">6</button>
+                <button class="key-enter" data-action="enter">&#8593</button>
+                <button class="key-num" data-action="1">1</button>
+                <button class="key-num" data-action="2">2</button>
+                <button class="key-num" data-action="3">3</button>
+                <button class="key-num" data-action="0">0</button>
+                <button class="key-num" data-action="dot">.</button>
+                <button data-action="clear">AC</button>
+                <button data-action="reset">C</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/rpn_calc.js"></script>
+</body>
+
+</html>
